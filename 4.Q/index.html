@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">iNeuron</div>
+        <div class="navbar-menu">
+          <a href="#" class="navbar-item">Home</a>
+          <a href="#" class="navbar-item">About</a>
+          <a href="#" class="navbar-item">Services</a>
+          <a href="#" class="navbar-item">Contact</a>
+        </div>
+        <div class="hamburger-menu">&#9776;</div>
+      </nav>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var hamburgerMenu = document.querySelector('.hamburger-menu');
+          var navbarMenu = document.querySelector('.navbar-menu');
+    
+          hamburgerMenu.addEventListener('click', function() {
+            navbarMenu.classList.toggle('active');
+          });
+        });
+      </script>
+</body>
+</html>

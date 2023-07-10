@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input App</title>
+    <style>
+      #inputBox {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inputBox" placeholder="Type something">
+    <button id="submitButton">Submit</button>
+    <ul id="outputList"></ul>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var inputBox = document.getElementById('inputBox');
+        var submitButton = document.getElementById('submitButton');
+        var outputList = document.getElementById('outputList');
+  
+        submitButton.addEventListener('click', function() {
+          var userInput = inputBox.value;
+          if (userInput !== '') {
+            var listItem = document.createElement('li');
+            listItem.textContent = userInput;
+            outputList.appendChild(listItem);
+            inputBox.value = '';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
